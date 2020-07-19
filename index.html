@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box2{
+            position: relative;
+            left: 0;
+            top: 10px;
+            width: 300px;
+            border:1px solid #666;
+            border-radius: 10px;
+            color: white;
+            background-color: #666;
+            display: none;
+        }
+        .box2::before{
+            position: absolute;
+            top: -21px;
+            left: 10px;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #666;
+        }
+        .box1:hover .box2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">position使用方法
+        <div class="box2">实现课程中sticky的应用案例，实现滚动页面时下一个标题会推开上一个标题的效果</div>
+    </div>
+    
+</body>
+</html>
